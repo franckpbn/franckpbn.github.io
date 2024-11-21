@@ -1,0 +1,46 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <main class="">
+      <div class="gap-8 h-screen grid grid-cols-2 grid-rows-2">
+        <div class="col-start-1 col-end-2 row-start-1 row-end-2">
+          <h1 class="font-bebas text-[200px]">Portfolio</h1>
+          <div class="flex justify-between items-center">
+            <p class="font-bebas text-4xl">Puybonnieux franck</p>
+            <p class="font-bebas text-2xl">2022 - 2024</p>
+          </div>
+          <p>MMI</p>
+        </div>
+        <div class="col-start-2 col-end-3 row-start-1 row-end-2"></div>
+        <div class="p-8 col-start-1 col-end-2 row-start-2 row-end-3 relative">
+          <img
+            src="/rectangle-vert.png"
+            alt="Rectangle Vert"
+            class="absolute top-[60px] left-[250px] transform -translate-x-1/2 -translate-y-1/2 -z-10"
+          />
+          <h2 class="relative z-10 font-bold text-3xl">À propos de moi</h2>
+          <p class="relative z-10">
+            Étudiant en 3e année de BUT Métiers du Multimédia et de l'Internet à
+            l'IUT du Limousin, je suis passionné par le design numérique et la
+            création de contenu multimédia. Curieux et créatif, j'explore des
+            domaines variés comme le graphisme, le développement web, et l'UI/UX
+            design. Mon parcours en MMI m’a permis de travailler sur des projets
+            concrets et de développer une solide compréhension de la
+            communication visuelle et de l’expérience utilisateur. J’aime
+            relever de nouveaux défis et enrichir mes compétences dans un
+            environnement dynamique.
+          </p>
+        </div>
+        <div class="col-start-2 col-end-3 row-start-2 row-end-3"></div>
+      </div>
+    </main>
+  </body>
+</html>

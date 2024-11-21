@@ -1,5 +1,6 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 ---
 
@@ -17,19 +18,17 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
             <p class="font-bebas text-4xl">Puybonnieux franck</p>
             <p class="font-bebas text-2xl">2022 - 2024</p>
           </div>
-          <p>MMI</p>
+          <p class="flex justify-end font-bebas text-2xl">MMI</p>
         </div>
-        <div class="col-start-2 col-end-3 row-start-1 row-end-2 relative">
-          <div class="flex gap-12 items-center justify-center">
-            <img
-              src="/souris.png"
-              alt="Souris"
-              class="absolute top-[500px] left-[500px] transform -translate-x-1/2 -translate-y-1/2 -z-10"
-            />
-            <p class=" bg-slate-900">A propos de moi</p>
-            <p>Mes réalisations</p>
-            <p>Contact</p>
-          </div>
+        <div
+          class="pt-12 flex justify-center col-start-2 col-end-3 row-start-1 row-end-2 relative"
+        >
+          <img
+            src="/souris.png"
+            alt="Souris"
+            class="absolute top-[500px] right-[-300px] transform -translate-x-1/2 -translate-y-1/2 -z-10"
+          />
+          <Header />
         </div>
         <div class="p-8 col-start-1 col-end-2 row-start-2 row-end-3 relative">
           <img
@@ -37,7 +36,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
             alt="Rectangle Vert"
             class="absolute top-[60px] left-[250px] transform -translate-x-1/2 -translate-y-1/2 -z-10"
           />
-          <h2 class="relative z-10 font-bold text-3xl">À propos de moi</h2>
+          <h1 class="relative z-10 font-bold text-3xl">À propos de moi</h1>
           <p class="relative z-10">
             Étudiant en 3e année de BUT Métiers du Multimédia et de l'Internet à
             l'IUT du Limousin, je suis passionné par le design numérique et la
@@ -50,7 +49,11 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
             environnement dynamique.
           </p>
         </div>
-        <div class="col-start-2 col-end-3 row-start-2 row-end-3"></div>
+        <div
+          class="font-source flex justify-center items-center col-start-2 col-end-3 row-start-2 row-end-3"
+        >
+          <p>UX – UI DESIGN - INTÉGRATION SITE WEB - COMMUNICATION</p>
+        </div>
       </div>
     </main>
   </body>

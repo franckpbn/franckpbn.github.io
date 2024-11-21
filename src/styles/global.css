@@ -4,7 +4,7 @@
   License MIT: https://github.com/HermanMartinus/bearblog/blob/master/LICENSE.md
  */
  @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
- 
+ @import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
 :root {
 	--accent: #2337ff;
 	--accent-dark: #000d8a;
@@ -55,7 +55,7 @@ h4,
 h5,
 h6 {
 	margin: 0 0 0.5rem 0;
-	color: rgb(var(--black));
+	color: #1D1D1D;
 	line-height: 1.2;
 }
 h1 {

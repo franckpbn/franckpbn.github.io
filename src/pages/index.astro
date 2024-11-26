@@ -8,11 +8,22 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 <html lang="en" class="overflow-x-hidden">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <style>
+      /* Effet de hover sur la carte */
+      .hover-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition douce pour le mouvement et l'ombre */
+      }
+
+      .hover-card:hover {
+        transform: translateY(-5px); /* Légère translation vers le haut */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombre portée plus prononcée */
+      }
+    </style>
   </head>
   <body class="w-full h-full overflow-x-hidden">
     <main class="w-full h-full">
       <!-- Header Section -->
-      <div class="flex justify-center">
+      <div class="flex justify-center pb-12">
         <Header />
       </div>
 
@@ -21,35 +32,41 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
         
         <!-- Section Portfolio -->
         <section class="p-4 md:col-span-1 md:row-span-1">
-          <h1 class="font-bebas text-6xl md:text-[150px] text-center md:text-left">
+          <h1 class="font-bebas text-8xl md:text-[150px] text-center md:text-left">
             Portfolio
           </h1>
           <div class="flex flex-col md:flex-row justify-between items-center mt-4">
-            <p class="font-bebas text-2xl md:text-4xl text-center md:text-left">Puybonnieux Franck</p>
+            <p class="font-bebas text-3xl md:text-4xl text-center md:text-left">Puybonnieux Franck</p>
             <p class="font-bebas text-xl md:text-2xl text-center md:text-left">2022 - 2024</p>
           </div>
-          <p class="font-bebas text-xl md:text-2xl mt-2 md:mt-0 text-center md:text-left">
+          <p class="font-bebas text-xl md:text-2xl md:mt-0 text-center md:text-left">
             MMI
           </p>
         </section>
 
-        <!-- Image "Souris" -->
-        <div class="relative pt-8 flex justify-center md:row-span-1">
-          <img
-            src="/souris.png"
-            alt="Souris"
-            class="hidden md:block w-[150px] md:w-auto max-w-[50%] object-contain absolute top-10 right-10 md:top-[500px] md:right-[-300px] md:translate-x-[-50%] md:translate-y-[-50%] -z-10"
-          />
-        </div>
+        <!-- Carte avec description rapide -->
+        <section class="p-4 md:col-span-1 flex justify-center items-start">
+          <div class="bg-white shadow-md rounded-lg p-6 max-w-[300px] hover-card">
+            <div class="flex items-center mb-4">
+              <!-- Placeholder pour le personnage -->
+              <div class="w-16 h-16 bg-lime-500 rounded-full flex-shrink-0"></div>
+              <div class="ml-4">
+                <p class="text-lg font-bold">Franck</p>
+                <p class="text-base text-gray-500">Étudiant</p>
+              </div>
+            </div>
+            <p class="text-sm text-gray-600">
+              Passionné par le design numérique et le multimédia. J'aime relever des défis créatifs et collaborer sur des projets innovants. 
+            </p>
+          </div>
+        </section>
 
         <!-- Section "À propos de moi" -->
         <section class="p-4 md:p-8 md:col-span-1">
-          <div class="relative">
-            <h1 class="relative z-10 font-bold text-2xl md:text-3xl text-center md:text-left">
-              À propos de <span class="text-green-500">moi</span>
-            </h1>
-          </div>
-          <p class="relative z-10 mt-4 text-justify leading-relaxed md:text-left px-8">
+          <h1 class="font-bold text-2xl md:text-3xl text-center md:text-left">
+            À propos de <span class="text-lime-500">moi</span>
+          </h1>
+          <p class="mt-4 text-justify leading-relaxed md:text-left px-8">
             Étudiant en 3e année de BUT Métiers du Multimédia et de l'Internet à
             l'IUT du Limousin, je suis passionné par le design numérique et la
             création de contenu multimédia. Curieux et créatif, j'explore des
@@ -64,7 +81,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 
         <!-- Compétences -->
         <div class="font-source flex justify-center items-center text-center md:row-span-1">
-          <p class="text-sm md:text-base">
+          <p class="text-sm md:text-base pb-24">
             UX – UI DESIGN - INTÉGRATION SITE WEB - COMMUNICATION
           </p>
         </div>

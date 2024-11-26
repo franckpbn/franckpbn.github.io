@@ -11,7 +11,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
     <style>
       /* Effet de hover sur la carte */
       .hover-card {
-        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition douce pour le mouvement et l'ombre */
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease; /* Transition douce pour le mouvement et l'ombre */
       }
 
       .hover-card:hover {
@@ -29,34 +31,47 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 
       <!-- Grid Layout -->
       <div class="gap-8 grid h-auto grid-cols-1 md:grid-cols-2">
-        
         <!-- Section Portfolio -->
         <section class="p-4 md:col-span-1 md:row-span-1">
-          <h1 class="font-bebas text-8xl md:text-[150px] text-center md:text-left">
+          <h1
+            class="font-bebas text-8xl md:text-[150px] text-center md:text-left"
+          >
             Portfolio
           </h1>
-          <div class="flex flex-col md:flex-row justify-between items-center mt-4">
-            <p class="font-bebas text-3xl md:text-4xl text-center md:text-left">Puybonnieux Franck</p>
-            <p class="font-bebas text-xl md:text-2xl text-center md:text-left">2022 - 2024</p>
+          <div
+            class="flex flex-col md:flex-row justify-between items-center mt-4"
+          >
+            <p class="font-bebas text-3xl md:text-4xl text-center md:text-left">
+              Puybonnieux Franck
+            </p>
+            <p class="font-bebas text-xl md:text-2xl text-center md:text-left">
+              2022 - 2024
+            </p>
           </div>
-          <p class="font-bebas text-xl md:text-2xl md:mt-0 text-center md:text-left">
+          <p
+            class="font-bebas text-xl md:text-2xl md:mt-0 text-center md:text-left"
+          >
             MMI
           </p>
         </section>
 
         <!-- Carte avec description rapide -->
         <section class="p-4 md:col-span-1 flex justify-center items-start">
-          <div class="bg-white shadow-md rounded-lg p-6 max-w-[300px] hover-card">
+          <div
+            class="bg-white shadow-md rounded-lg p-6 max-w-[300px] hover-card"
+          >
             <div class="flex items-center mb-4">
               <!-- Placeholder pour le personnage -->
-              <div class="w-16 h-16 bg-lime-500 rounded-full flex-shrink-0"></div>
+              <div class="w-16 h-16 bg-lime-500 rounded-full flex-shrink-0">
+              </div>
               <div class="ml-4">
                 <p class="text-lg font-bold">Franck</p>
                 <p class="text-base text-gray-500">Étudiant</p>
               </div>
             </div>
             <p class="text-sm text-gray-600">
-              Passionné par le design numérique et le multimédia. J'aime relever des défis créatifs et collaborer sur des projets innovants. 
+              Passionné par le design numérique et le multimédia. J'aime relever
+              des défis créatifs et collaborer sur des projets innovants.
             </p>
           </div>
         </section>
@@ -80,7 +95,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
         </section>
 
         <!-- Compétences -->
-        <div class="font-source flex justify-center items-center text-center md:row-span-1">
+        <div
+          class="font-source flex justify-center items-center text-center md:row-span-1"
+        >
           <p class="text-sm md:text-base pb-24">
             UX – UI DESIGN - INTÉGRATION SITE WEB - COMMUNICATION
           </p>

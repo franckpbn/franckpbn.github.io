@@ -9,35 +9,48 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body>
-    <main class="">
-      <div class="gap-8 h-screen grid grid-cols-2 grid-rows-2">
-        <div class="col-start-1 col-end-2 row-start-1 row-end-2">
-          <h1 class="font-bebas text-[200px]">Portfolio</h1>
-          <div class="flex justify-between items-center">
-            <p class="font-bebas text-4xl">Puybonnieux franck</p>
-            <p class="font-bebas text-2xl">2022 - 2024</p>
+  <body class="w-full h-full overflow-x-hidden">
+    <main class="w-full h-full">
+      <div class="flex justify-center">
+        <Header />
+      </div>
+      <div class="gap-8 w-screen h-auto grid grid-cols-1 md:grid-cols-2 grid-rows-auto">
+        <!-- Section Portfolio -->
+        <div class="col-span-1 p-4 md:col-start-1 md:col-end-2 md:row-start-1 md:row-end-2">
+          <h1 class="font-bebas text-6xl md:text-[150px] text-center md:text-left">
+            Portfolio
+          </h1>
+          <div class="flex flex-col md:flex-row justify-between items-center mt-4">
+            <p class="font-bebas text-2xl md:text-4xl">Puybonnieux Franck</p>
+            <p class="font-bebas text-xl md:text-2xl">2022 - 2024</p>
           </div>
-          <p class="flex justify-end font-bebas text-2xl">MMI</p>
+          <p class="flex justify-end font-bebas text-xl md:text-2xl mt-2 md:mt-0">
+            MMI
+          </p>
         </div>
+        <!-- Image Souris -->
         <div
-          class="pt-12 flex justify-center col-start-2 col-end-3 row-start-1 row-end-2 relative"
+          class="pt-8 flex justify-center col-span-1 md:col-start-2 md:col-end-3 row-start-2 md:row-start-1 relative"
         >
           <img
             src="/souris.png"
             alt="Souris"
-            class="absolute top-[500px] right-[-300px] transform -translate-x-1/2 -translate-y-1/2 -z-10"
+            class="w-20 h-20 md:w-auto md:h-auto absolute top-0 right-0 md:top-[500px] md:right-[-300px] transform md:-translate-x-1/2 md:-translate-y-1/2 -z-10"
           />
-          <Header />
         </div>
-        <div class="p-8 col-start-1 col-end-2 row-start-2 row-end-3 relative">
-          <img
-            src="/rectangle-vert.png"
-            alt="Rectangle Vert"
-            class="absolute top-[60px] left-[250px] transform -translate-x-1/2 -translate-y-1/2 -z-10"
-          />
-          <h1 class="relative z-10 font-bold text-3xl">À propos de moi</h1>
-          <p class="relative z-10">
+        <!-- À propos de moi -->
+        <div class="p-4 md:p-8 col-span-1 md:col-start-1 md:col-end-2 md:row-start-2">
+          <div class="relative">
+            <img
+              src="/rectangle-vert.png"
+              alt="Rectangle Vert"
+              class="hidden md:block absolute top-[60px] left-[250px] transform -translate-x-1/2 -translate-y-1/2 -z-10"
+            />
+            <h1 class="relative z-10 font-bold text-2xl md:text-3xl">
+              À propos <span class="text-green-500">de moi</span>
+            </h1>
+          </div>
+          <p class="relative z-10 mt-4 text-justify">
             Étudiant en 3e année de BUT Métiers du Multimédia et de l'Internet à
             l'IUT du Limousin, je suis passionné par le design numérique et la
             création de contenu multimédia. Curieux et créatif, j'explore des
@@ -49,10 +62,13 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
             environnement dynamique.
           </p>
         </div>
+        <!-- Compétences -->
         <div
-          class="font-source flex justify-center items-center col-start-2 col-end-3 row-start-2 row-end-3"
+          class="font-source flex justify-center items-center col-span-1 md:col-start-2 md:col-end-3 row-start-3 md:row-start-2"
         >
-          <p>UX – UI DESIGN - INTÉGRATION SITE WEB - COMMUNICATION</p>
+          <p class="text-sm md:text-base text-center">
+            UX – UI DESIGN - INTÉGRATION SITE WEB - COMMUNICATION
+          </p>
         </div>
       </div>
     </main>

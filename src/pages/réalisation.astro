@@ -11,7 +11,19 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
   </head>
   <body>
     <main class="">
-      <Header />
+      <div class="flex justify-center">
+        <Header />
+      </div>
+      <div class=" h-screen grid grid-cols-5 grid-rows-5 gap-0">
+        <div class="col-start-1 col-end-2 row-start-1 row-end-6">
+        </div>
+        <div class="col-start-5 col-end-6 row-start-1 row-end-6 bg-gray-400">
+          Div 2
+        </div>
+        <div class="col-start-2 col-end-5 row-start-1 row-end-6 bg-gray-500">
+          Div 3
+        </div>
+      </div>
     </main>
   </body>
 </html>

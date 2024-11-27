@@ -9,100 +9,60 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
     <style>
-      /* Effet de hover sur la carte */
       .hover-card {
-        transition:
-          transform 0.3s ease,
-          box-shadow 0.3s ease; /* Transition douce pour le mouvement et l'ombre */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
-
       .hover-card:hover {
-        transform: translateY(-5px); /* Légère translation vers le haut */
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Ombre portée plus prononcée */
+        transform: translateY(-5px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       }
     </style>
   </head>
-  <body class="w-full h-full overflow-x-hidden">
-    <main class="w-full h-full">
-      <!-- Header Section -->
+  <body class="overflow-x-hidden flex flex-col min-h-screen">
+    <main class="flex-grow p-8">
       <div class="flex justify-center pb-12">
         <Header />
       </div>
-
-      <!-- Grid Layout -->
-      <div class="gap-8 grid h-auto grid-cols-1 md:grid-cols-2">
-        <!-- Section Portfolio -->
-        <section class="p-4 md:col-span-1 md:row-span-1">
-          <h1
-            class="font-bebas text-8xl md:text-[150px] text-center md:text-left"
-          >
-            Portfolio
-          </h1>
-          <div
-            class="flex flex-col md:flex-row justify-between items-center mt-4"
-          >
-            <p class="font-bebas text-3xl md:text-4xl text-center md:text-left">
-              Puybonnieux Franck
-            </p>
-            <p class="font-bebas text-xl md:text-2xl text-center md:text-left">
-              2022 - 2024
-            </p>
+      <div class="grid gap-8 h-auto grid-cols-1 md:grid-cols-2">
+        <section class="p-4">
+          <h1 class="font-bebas text-8xl md:text-[150px] font-bold text-center md:text-left">Portfolio</h1>
+          <div class="flex flex-col md:flex-row justify-between items-center mt-4">
+            <p class="font-bebas text-3xl md:text-4xl">Puybonnieux Franck</p>
+            <p class="font-bebas text-xl md:text-2xl">2022 - 2024</p>
           </div>
-          <p
-            class="font-bebas text-xl md:text-2xl md:mt-0 text-center md:text-left"
-          >
-            MMI
-          </p>
+          <p class="flex justify-center md:justify-end font-bebas text-xl md:text-2xl">MMI</p>
         </section>
-
-        <!-- Carte avec description rapide -->
-        <section class="p-4 md:col-span-1 flex justify-center items-start">
-          <div
-            class="bg-white shadow-md rounded-lg p-6 max-w-[300px] hover-card"
-          >
+        <section class="p-4 flex justify-center items-start">
+          <div class="bg-white shadow-md rounded-lg p-6 max-w-[300px] hover-card">
             <div class="flex items-center mb-4">
-              <!-- Placeholder pour le personnage -->
-              <div class="w-16 h-16 bg-lime-500 rounded-full flex-shrink-0">
-              </div>
+              <div class="w-16 h-16 bg-lime-500 rounded-full"></div>
               <div class="ml-4">
                 <p class="text-lg font-bold">Franck</p>
                 <p class="text-base text-gray-500">Étudiant</p>
               </div>
             </div>
             <p class="text-sm text-gray-600">
-              Passionné par le design numérique et le multimédia. J'aime relever
-              des défis créatifs et collaborer sur des projets innovants.
+              Passionné par le design numérique et le multimédia. J'aime relever des défis créatifs et collaborer sur des projets innovants.
             </p>
           </div>
         </section>
-
-        <!-- Section "À propos de moi" -->
-        <section class="p-4 md:p-8 md:col-span-1">
+        <section class="p-4 md:p-8">
           <h1 class="font-bold text-2xl md:text-3xl text-center md:text-left">
             À propos de <span class="text-lime-500">moi</span>
           </h1>
-          <p class="mt-4 text-justify leading-relaxed md:text-left px-8">
-            Étudiant en 3e année de BUT Métiers du Multimédia et de l'Internet à
-            l'IUT du Limousin, je suis passionné par le design numérique et la
-            création de contenu multimédia. Curieux et créatif, j'explore des
-            domaines variés comme le graphisme, le développement web, et l'UI/UX
-            design. Mon parcours en MMI m’a permis de travailler sur des projets
-            concrets et de développer une solide compréhension de la
-            communication visuelle et de l’expérience utilisateur. J’aime
-            relever de nouveaux défis et enrichir mes compétences dans un
-            environnement dynamique.
+          <p class="mt-4 leading-relaxed px-8 text-justify">
+            Étudiant en 3e année de BUT Métiers du Multimédia et de l'Internet à l'IUT du Limousin, je suis passionné par le design numérique et la création de contenu multimédia. Curieux et créatif, j'explore des domaines variés comme le graphisme, le développement web, et l'UI/UX design. J’aime relever de nouveaux défis et enrichir mes compétences dans un environnement dynamique.
           </p>
         </section>
-
-        <!-- Compétences -->
-        <div
-          class="font-source flex justify-center items-center text-center md:row-span-1"
-        >
-          <p class="text-sm md:text-base pb-24">
+        <div class="font-source flex justify-center items-center text-center">
+          <p class="text-sm md:text-base">
             UX – UI DESIGN - INTÉGRATION SITE WEB - COMMUNICATION
           </p>
         </div>
       </div>
     </main>
+    <footer class="bg-gray-800 text-white text-center py-4">
+      <p class="text-sm">© 2024 Franck Puybonnieux. Tous droits réservés.</p>
+    </footer>
   </body>
 </html>

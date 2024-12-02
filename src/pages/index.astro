@@ -10,7 +10,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
     <style>
       .hover-card {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
       }
       .hover-card:hover {
         transform: translateY(-5px);
@@ -25,15 +27,27 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
       </div>
       <div class="grid gap-8 h-auto grid-cols-1 md:grid-cols-2">
         <section class="p-4">
-          <h1 class="font-bebas text-8xl md:text-[150px] font-bold text-center md:text-left">Portfolio</h1>
-          <div class="flex flex-col md:flex-row justify-between items-center mt-4">
+          <h1
+            class="font-bebas text-8xl md:text-[150px] font-bold text-center md:text-left"
+          >
+            Portfolio
+          </h1>
+          <div
+            class="flex flex-col md:flex-row justify-between items-center mt-4"
+          >
             <p class="font-bebas text-3xl md:text-4xl">Puybonnieux Franck</p>
             <p class="font-bebas text-xl md:text-2xl">2022 - 2024</p>
           </div>
-          <p class="flex justify-center md:justify-end font-bebas text-xl md:text-2xl">MMI</p>
+          <p
+            class="flex justify-center md:justify-end font-bebas text-xl md:text-2xl"
+          >
+            MMI
+          </p>
         </section>
         <section class="p-4 flex justify-center items-start">
-          <div class="bg-white shadow-md rounded-lg p-6 max-w-[300px] hover-card">
+          <div
+            class="bg-white shadow-md rounded-lg p-6 max-w-[300px] hover-card"
+          >
             <div class="flex items-center mb-4">
               <img src="/visage.png" alt="Visage de Franck" class="w-16 h-16" />
               <div class="ml-4">
@@ -42,7 +56,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
               </div>
             </div>
             <p class="text-sm text-gray-600">
-              Passionné par le design numérique et le multimédia. J'aime relever des défis créatifs et collaborer sur des projets innovants.
+              Passionné par le design numérique et le multimédia. J'aime relever
+              des défis créatifs et collaborer sur des projets innovants.
             </p>
           </div>
         </section>
@@ -51,7 +66,12 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
             À propos de <span class="text-lime-500">moi</span>
           </h1>
           <p class="mt-4 leading-relaxed px-8 text-justify">
-            Étudiant en 3e année de BUT Métiers du Multimédia et de l'Internet à l'IUT du Limousin, je suis passionné par le design numérique et la création de contenu multimédia. Curieux et créatif, j'explore des domaines variés comme le graphisme, le développement web, et l'UI/UX design. J’aime relever de nouveaux défis et enrichir mes compétences dans un environnement dynamique.
+            Étudiant en 3e année de BUT Métiers du Multimédia et de l'Internet à
+            l'IUT du Limousin, je suis passionné par le design numérique et la
+            création de contenu multimédia. Curieux et créatif, j'explore des
+            domaines variés comme le graphisme, le développement web, et l'UI/UX
+            design. J’aime relever de nouveaux défis et enrichir mes compétences
+            dans un environnement dynamique.
           </p>
         </section>
         <div class="font-source flex justify-center items-center text-center">

@@ -6,24 +6,35 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 // Liste des projets
 const projects = [
   {
-    title: "Projet 1",
-    description: "Un projet personnel pour apprendre Blender.",
-    image: "/réalisation2.png",
+    title: "Promotions",
+    description:
+      "Dans ce projet à des fins scolaires, nous devions réaliser sous Blender un objet innovant et en faire sa promotion",
+    image: "/realisation1.png",
     link: "/projet1",
   },
   {
-    title: "Projet 2",
-    description: "Création de modèles 3D avec des textures complexes.",
-    image: "/réalisation2.png",
+    title: "Jeux-vidéo",
+    description:
+      "Création d'un jeu vidéo pixel dans une mécanique Mario Bros où la princesse sauve le prince du grand dragon.",
+    image: "/realisation3.png",
     link: "/projet2",
   },
   {
-    title: "Projet 3",
-    description: "Animation et rendu réaliste dans Blender.",
-    image: "/réalisation2.png",
+    title: "Site internet",
+    description:
+      "En équipe de 3, nous devions réaliser un site internet sur la mode responsable pour en faire les promotions et expliquer en quoi ça consiste",
+    image: "/realisation4.png",
     link: "/projet3",
   },
 ];
+
+// Fonction pour tronquer les descriptions
+function truncate(text, maxLength) {
+  if (text.length > maxLength) {
+    return text.substring(0, maxLength) + "...";
+  }
+  return text;
+}
 ---
 
 <!doctype html>
@@ -31,8 +42,8 @@ const projects = [
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
   </head>
-  <body class="flex justify-center items-center">
-    <main class="container">
+  <body class="flex flex-col items-center min-h-screen">
+    <main class="container flex-grow">
       <div class="flex justify-center pt-3.5">
         <Header />
       </div>
@@ -40,13 +51,13 @@ const projects = [
       <!-- Section Projet Principal -->
       <section class="my-16">
         <h2 class="font-bebas text-8xl md:text-[150px] font-bold mb-6">
-          Projet Principal
+          Projets Personnels
         </h2>
         <div class="relative bg-white rounded-lg shadow-lg overflow-hidden">
           <img
             src="/réalisation2.png"
             alt="Projet Principal"
-            class="w-full h-[400px] object-cover"
+            class="w-full h-[600px] object-cover"
           />
           <div class="p-6">
             <h3 class="text-3xl font-bold text-gray-800 mb-4">
@@ -59,7 +70,7 @@ const projects = [
             </p>
             <a
               href="/projet1"
-              class="px-6 py-2 rounded-full bg-lime-500 text-white font-semibold shadow-md hover:bg-lime-500 hover:shadow-lg hover:text-black transition-all duration-300"
+              class="px-6 py-2 rounded-full bg-black text-white font-semibold hover:text-gray-50 shadow-md hover:shadow-lg transition-all duration-300"
             >
               En savoir plus
             </a>
@@ -69,8 +80,10 @@ const projects = [
 
       <!-- Section Projets Secondaires -->
       <section>
-        <h2 class="text-4xl font-bold mb-6">Projets Secondaires</h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <h2 class="font-bebas text-6xl md:text-[100px] font-bold mb-6">
+          Projets Scolaires
+        </h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 pb-20">
           {
             projects.map((project) => {
               return (
@@ -78,18 +91,18 @@ const projects = [
                   <img
                     src={project.image}
                     alt={project.title}
-                    class="w-full h-48 object-cover"
+                    class="w-full object-cover"
                   />
                   <div class="p-4">
                     <h3 class="text-2xl font-semibold text-gray-800">
                       {project.title}
                     </h3>
                     <p class="text-gray-600 text-sm mb-4">
-                      {project.description}
+                      {truncate(project.description, 100)}
                     </p>
                     <a
                       href={project.link}
-                      class="text-lime-500 font-semibold hover:underline"
+                      class="px-6 py-2 rounded-full text-sm bg-black text-white font-semibold hover:text-gray-50 shadow-md hover:shadow-lg transition-all duration-300"
                     >
                       Détails
                     </a>
@@ -100,9 +113,9 @@ const projects = [
           }
         </div>
       </section>
-      <footer class="bg-gray-800 text-white text-center py-4 mt-8">
-        <p class="text-sm">© 2024 Franck Puybonnieux. Tous droits réservés.</p>
-      </footer>
     </main>
+    <footer class="w-full bg-gray-800 text-white text-center py-4">
+      <p class="text-sm">© 2024 Franck Puybonnieux. Tous droits réservés.</p>
+    </footer>
   </body>
 </html>

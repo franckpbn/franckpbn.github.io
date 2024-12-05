@@ -5,18 +5,30 @@ import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 
 const project = {
-  title: "Blender - Modélisation 3D",
-  description: "Un projet personnel réalisé pour apprendre à utiliser Blender.",
+  title: "Promotions",
+  description:
+    "La conception et la promotion d'une lampe à lave révolutionnaire.",
   image: "/realisation1.png",
   details:
-    "Ce projet inclut la modélisation 3D, la création de textures simples, et l'expérimentation avec les lumières et les rendus de base.",
+    "Dans ce projet à des fins scolaires, nous devions réaliser sous Blender un objet innovant et en faire sa promotion",
 };
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <style>
+      .hover-card {
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+      .hover-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      }
+    </style>
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body class="">
@@ -61,16 +73,19 @@ const project = {
           Objectifs du Projet
         </h2>
         <ul class="list-disc pl-6 space-y-3 text-gray-700">
-          <li>Apprendre les bases de la modélisation 3D dans Blender.</li>
+          <li>Concevoir un objet innovant : une lampe à lave moderne.</li>
+          <li>Apprendre à maîtriser la modélisation 3D sur Blender.</li>
           <li>
-            Expérimenter avec les éclairages et les rendus pour une scène
-            réaliste.
+            Mettre en valeur l'originalité de la lampe à lave à travers des
+            rendus visuels impactants.
           </li>
           <li>
-            Créer une composition visuelle qui transmet une ambiance unique.
+            Exploiter les textures et matériaux pour obtenir un rendu réaliste.
           </li>
-          <li>Comprendre les concepts de textures et de matériaux.</li>
-          <li>Représenter les backrooms.</li>
+          <li>
+            Créer une expérience visuelle immersive pour la promotion du
+            produit.
+          </li>
         </ul>
       </section>
 
@@ -85,22 +100,26 @@ const project = {
           <div class="p-8">
             <h2 class="text-3xl font-bold mb-4">Méthodologie</h2>
             <p class="text-gray-700 text-lg">
-              Le projet a été réalisé en suivant plusieurs étapes :
+              Le projet a été réalisé en suivant plusieurs étapes clés :
             </p>
             <ol class="list-decimal pl-6 space-y-3 text-gray-700 mt-4">
-              <li>Esquisse d'un concept de scène 3D et planification.</li>
+              <li>Définir un concept de lampe à lave moderne et innovant.</li>
               <li>
-                Modélisation des éléments principaux en utilisant les primitives
-                de Blender.
+                Réaliser la modélisation 3D des éléments principaux de la lampe
+                avec Blender.
               </li>
               <li>
-                Application de textures et de matériaux adaptés à chaque
-                surface.
+                Ajouter des textures et des matériaux réalistes pour donner vie
+                à l'objet.
               </li>
               <li>
-                Réglage des éclairages pour mettre en valeur la composition.
+                Ajuster l'éclairage et l'environnement pour mettre en valeur le
+                produit.
               </li>
-              <li>Rendu final avec des paramètres de haute qualité.</li>
+              <li>
+                Réaliser le rendu final pour une présentation optimale du
+                projet.
+              </li>
             </ol>
           </div>
         </div>
@@ -115,32 +134,22 @@ const project = {
           <img
             src="/realisation1.png"
             alt="Rendu 1"
-            class="rounded-lg shadow-lg"
+            class="rounded-lg shadow-lg hover-card"
           />
           <img
             src="/realisation3.2.png"
             alt="Rendu 2"
-            class="rounded-lg shadow-lg"
+            class="rounded-lg shadow-lg hover-card"
           />
           <img
             src="/realisation3.3.png"
             alt="Rendu 3"
-            class="rounded-lg shadow-lg"
+            class="rounded-lg shadow-lg hover-card"
           />
           <img
             src="/realisation3.4.png"
             alt="Rendu 4"
-            class="rounded-lg shadow-lg"
-          />
-          <img
-            src="/realisation1.png"
-            alt="Rendu 5"
-            class="rounded-lg shadow-lg"
-          />
-          <img
-            src="/realisation1.png"
-            alt="Rendu 6"
-            class="rounded-lg shadow-lg"
+            class="rounded-lg shadow-lg hover-card"
           />
         </div>
       </section>

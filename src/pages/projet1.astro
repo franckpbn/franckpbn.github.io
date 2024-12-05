@@ -1,6 +1,7 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 
 const project = {
@@ -144,9 +145,8 @@ const project = {
         </div>
       </section>
     </main>
-
-    <footer class="w-full bg-gray-800 text-white text-center py-4">
-      <p class="text-sm">© 2024 Franck Puybonnieux. Tous droits réservés.</p>
-    </footer>
+    <div class="w-full">
+      <Footer />
+    </div>
   </body>
 </html>

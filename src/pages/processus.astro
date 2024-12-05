@@ -1,0 +1,111 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<!doctype html>
+<html lang="en" class="overflow-x-hidden">
+  <head>
+    <BaseHead title={`${SITE_TITLE} | Processus`} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="overflow-x-hidden flex flex-col min-h-screen">
+    <!-- Header -->
+    <div class="flex justify-center pt-12">
+      <Header />
+    </div>
+
+    <!-- Main Content -->
+    <main class="flex-grow p-8">
+      <div class="max-w-4xl mx-auto">
+        <!-- Title Section -->
+        <h1 class="text-4xl font-bold text-gray-800 mb-6 text-center">Mon Processus de Travail</h1>
+        <p class="text-lg text-gray-700 text-center mb-8">
+          Découvrez comment je structure mes projets, du début à la fin, pour offrir des résultats de qualité.
+        </p>
+
+        <!-- Processus Section -->
+        <section class="mb-12">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">Étapes de Mon Processus</h2>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            Chaque projet commence par une réflexion approfondie, suivie de plusieurs étapes pour garantir une expérience fluide et une livraison réussie.
+          </p>
+
+          <div class="grid gap-12 lg:grid-cols-2">
+            <!-- Étape 1 : Brief -->
+            <div class="flex items-center space-x-6">
+              <div class="w-12 h-12 bg-lime-500 rounded-full text-white flex justify-center items-center">
+                <span class="font-bold text-xl">1</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-gray-800">Le Brief</h3>
+                <p class="text-gray-600 leading-relaxed">
+                  La première étape consiste à comprendre les besoins du client. Nous définissons ensemble les objectifs du projet, les délais et les attentes spécifiques. Cette phase est cruciale pour établir une direction claire.
+                </p>
+              </div>
+            </div>
+            
+            <!-- Étape 2 : Recherches -->
+            <div class="flex items-center space-x-6">
+              <div class="w-12 h-12 bg-lime-500 rounded-full text-white flex justify-center items-center">
+                <span class="font-bold text-xl">2</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-gray-800">Recherches</h3>
+                <p class="text-gray-600 leading-relaxed">
+                  Je réalise des recherches approfondies pour comprendre le marché, la concurrence, et les besoins spécifiques des utilisateurs. Cela inclut également l'exploration des dernières tendances en design.
+                </p>
+              </div>
+            </div>
+
+            <!-- Étape 3 : Design -->
+            <div class="flex items-center space-x-6">
+              <div class="w-12 h-12 bg-lime-500 rounded-full text-white flex justify-center items-center">
+                <span class="font-bold text-xl">3</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-gray-800">Design</h3>
+                <p class="text-gray-600 leading-relaxed">
+                  Une fois les recherches effectuées, je commence à concevoir l'interface. L'accent est mis sur l'expérience utilisateur, l'esthétique et l'ergonomie. J'utilise des outils comme Figma pour créer des prototypes interactifs.
+                </p>
+              </div>
+            </div>
+
+            <!-- Étape 4 : Livraison -->
+            <div class="flex items-center space-x-6">
+              <div class="w-12 h-12 bg-lime-500 rounded-full text-white flex justify-center items-center">
+                <span class="font-bold text-xl">4</span>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-gray-800">Livraison</h3>
+                <p class="text-gray-600 leading-relaxed">
+                  Après les retours du client et les ajustements nécessaires, le projet est livré. Je m'assure de sa qualité en effectuant des tests et en vérifiant la performance avant de le mettre en ligne.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Outils et Méthodes -->
+        <section>
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">Méthodes et Outils Utilisés</h2>
+          <p class="text-gray-700 leading-relaxed mb-4">
+            Pour chaque projet, j'utilise une combinaison de méthodes et d'outils pour garantir une exécution fluide et efficace.
+          </p>
+          <ul class="list-disc list-inside text-gray-700 space-y-2">
+            <li><strong>Design UX/UI :</strong> Figma, Adobe XD, Sketch pour les maquettes et prototypes.</li>
+            <li><strong>Développement Front-End :</strong> React, Tailwind CSS, HTML, CSS.</li>
+            <li><strong>Test Utilisateur :</strong> Outils de test comme Maze ou UserTesting pour recueillir des retours utilisateurs.</li>
+            <li><strong>Gestion de projet :</strong> Trello, Asana pour le suivi des tâches et la collaboration.</li>
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <div class="w-full">
+      <Footer />
+    </div>
+  </body>
+</html>

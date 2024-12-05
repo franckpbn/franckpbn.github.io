@@ -1,6 +1,7 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 
 // Liste des projets
@@ -44,7 +45,7 @@ function truncate(text, maxLength) {
   </head>
   <body class="flex flex-col items-center min-h-screen">
     <main class="container flex-grow">
-      <div class="flex justify-center pt-3.5">
+      <div class="flex justify-center pt-[30px]">
         <Header />
       </div>
 
@@ -114,8 +115,8 @@ function truncate(text, maxLength) {
         </div>
       </section>
     </main>
-    <footer class="w-full bg-gray-800 text-white text-center py-4">
-      <p class="text-sm">© 2024 Franck Puybonnieux. Tous droits réservés.</p>
-    </footer>
+    <div class="w-full">
+      <Footer />
+    </div>
   </body>
 </html>

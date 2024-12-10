@@ -6,27 +6,45 @@
     <div class="internal-links ">
       <a href="/">Acceuil</a>
       <a href="/realisation">Mes réalisations</a>
-      <a href="/processus">Processus</a>
       <a href="/about">A propos</a>
     </div>
     <div class="social-links"></div>
   </nav>
 </header>
 <style>
-  nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  nav a {
-    padding: 0 1em;
-    color: var(--black);
-    text-decoration: none;
-	  border: solid 1px #1d1d1d;
-  }
-  nav a:hover {
-    color: white;
-    background-color: #1d1d1d;
+nav {
+  display: flex;
+  justify-content: center;
+}
 
+.internal-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+nav a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 1em;
+  color: #1d1d1d;
+  text-decoration: none;
+  border: 1px solid #1d1d1d;
+}
+
+nav a:hover {
+  color: white;
+  background-color: #1d1d1d;
+}
+
+@media (min-width: 768px) {
+  .internal-links {
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    gap: 16px;
   }
+}
+
 </style>

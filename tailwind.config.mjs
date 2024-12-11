@@ -7,6 +7,7 @@ export default {
       fontFamily: {
         bebas: ["Bebas Neue", "sans-serif"],
         source : ["Source Sans 3", "serif"],
+        embed : ["DynaPuff", "system-ui"]
       },
     },
   },

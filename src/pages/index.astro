@@ -11,7 +11,9 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
     <style>
       .hover-card {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
       }
       .hover-card:hover {
         transform: translateY(-5px);
@@ -20,7 +22,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
     </style>
   </head>
   <body class="overflow-x-hidden flex flex-col min-h-screen">
-    <main class="flex-grow md:p-12 p-6 bg-stone-200">
+    <main class="flex-grow md:px-28 px-6 py-12 bg-stone-200">
       <!-- Header Section -->
       <div class="flex justify-center pb-12">
         <Header />
@@ -30,54 +32,109 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
       <div class="grid gap-12 grid-cols-1 lg:grid-cols-2 items-start">
         <!-- Title Section -->
         <section class="p-4 sm:px-8 text-center lg:text-left">
-          <h1 class="font-embed text-6xl lg:text-[120px] font-bold text-lime-500">
+          <h1
+            class="font-embed text-6xl lg:text-[100px] font-bold text-lime-500"
+          >
             Mon Portfolio
           </h1>
-          <div class="flex flex-col lg:flex-row justify-center lg:justify-between items-center mt-6">
-            <p class="font-embed font-medium text-3xl lg:text-5xl text-stone-600">
+          <div
+            class="flex flex-col lg:flex-row justify-center lg:justify-between items-center mt-6"
+          >
+            <p
+              class="font-embed font-medium text-3xl lg:text-5xl text-stone-600"
+            >
               Franck Puybonnieux
             </p>
             <p class="font-embed text-xl lg:text-3xl text-stone-600">
               2022 - 2025
             </p>
           </div>
-          <p class="mt-4 font-embed font-medium text-xl lg:text-2xl text-lime-500">
+          <p
+            class="mt-4 font-embed font-medium text-xl lg:text-2xl text-lime-500"
+          >
             Étudiant MMI
           </p>
         </section>
 
         <!-- Introduction Card -->
         <section class="p-4 sm:px-6 lg:px-8 flex justify-center items-start">
-          <div class="bg-stone-100 shadow-lg rounded-lg p-6 sm:p-8 max-w-[400px] hover-card">
+          <div
+            class="bg-stone-100 shadow-lg rounded-lg p-6 sm:p-8 max-w-[400px] hover-card"
+          >
             <div class="flex flex-col md:flex-row items-center mb-6">
-              <img src="/visage.png" alt="Visage de Franck" class="w-12 h-12 md:w-20 md:h-20" />
+              <img
+                src="/visage.png"
+                alt="Visage de Franck"
+                class="w-12 h-12 md:w-20 md:h-20"
+              />
               <div class="ml-6 mt-4 md:mt-0">
                 <p class="font-embed text-2xl font-medium text-lime-500">
-                  Freanque <span class="font-thin text-xs text-stone-400">mon surnom</span>
+                  Freanque <span class="font-thin text-xs text-stone-400"
+                    >mon surnom</span
+                  >
                 </p>
-                <p class="font-embed font-medium text-base text-stone-600">Étudiant</p>
+                <p class="font-embed font-medium text-base text-stone-600">
+                  Étudiant
+                </p>
               </div>
             </div>
             <p class="text-sm md:text-lg text-stone-600 leading-relaxed">
-              Passionné par le design numérique, les jeux vidéo et le dessin, je suis toujours prêt à relever de nouveaux défis créatifs. Je m'amuse à transformer des idées en designs et à innover sur des projets innovants. Je suis toujours curieux d'en apprendre plus.
+              Passionné par le design numérique, les jeux vidéo et le dessin, je
+              suis toujours prêt à relever de nouveaux défis créatifs. Je
+              m'amuse à transformer des idées en designs et à innover sur des
+              projets innovants. Je suis toujours curieux d'en apprendre plus.
             </p>
           </div>
         </section>
       </div>
 
       <!-- About Section -->
-      <section class="mt-12 p-4 sm:px-6 lg:px-8 bg-white rounded-lg shadow-md">
-        <h2 class="font-embed font-medium text-2xl lg:text-4xl text-stone-600 text-center lg:text-left">
+      <section class="mt-12 p-4 sm:px-12 lg:px-8 bg-white rounded-lg shadow-md">
+        <h2
+          class="font-embed font-medium text-2xl lg:text-4xl text-stone-600 text-center lg:text-left"
+        >
           À propos de <span class="text-lime-500">moi</span>
         </h2>
         <p class="mt-6 text-sm md:text-lg text-stone-600">
-          Je suis actuellement en 3e année de BUT Métiers du Multimédia et de l'Internet à l'IUT du Limousin. En dehors des études, je dessine, et j'aime jouer jeux vidéo. J'aime explorer différents domaines comme le graphisme, le développement web et l'UI/UX design. Je suis un curieux de nature et j'adore résoudre des problèmes complexes.
+          Je suis actuellement en 3e année de BUT Métiers du Multimédia et de
+          l'Internet à l'IUT du Limousin. En dehors des études, je dessine, et
+          j'aime jouer jeux vidéo. J'aime explorer différents domaines comme le
+          graphisme, le développement web et l'UI/UX design. Je suis un curieux
+          de nature et j'adore résoudre des problèmes complexes.
         </p>
       </section>
 
+      <!-- CV Section -->
+    <section
+    class="mt-12 p-4 sm:px-6 lg:px-8 bg-white rounded-lg shadow-md flex flex-col justify-center items-center"
+  >
+  <p
+  class="font-embed text-2xl lg:px-8 text-stone-600 font-medium mb-4"
+>
+  Mon <span class="text-lime-500">CV</span>
+</p>
+    <img
+      src="/CV.png"
+      alt="Aperçu de mon CV"
+      class="h-auto md:h-[800px] mb-6 md:mb-0 md:mr-6 shadow-lg hover-card"
+    />
+    <div class="text-center md:text-left">
+      <a
+        href="/CV.png"
+        download
+        class=" mt-8 inline-block px-4 py-2 bg-lime-500 text-stone-50 text-sm md:text-base rounded-lg shadow-md hover:bg-lime-600 hover:text-stone-50 transition-colors"
+      >
+        Télécharger mon CV
+      </a>
+    </div>
+  </section>
+
+
       <!-- Skills Section -->
       <div class="font-source flex justify-center items-center mt-16">
-        <p class="font-embed text-lg lg:text-xl text-lime-500 text-center uppercase">
+        <p
+          class="font-embed text-lg lg:text-xl text-lime-500 text-center uppercase"
+        >
           UX/UI DESIGN - INTÉGRATION SITE WEB - COMMUNICATION
         </p>
       </div>

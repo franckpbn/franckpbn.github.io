@@ -8,134 +8,180 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
 <!doctype html>
 <html lang="en" class="overflow-x-hidden">
   <head>
-    <BaseHead title={`${SITE_TITLE} | À propos`} description={SITE_DESCRIPTION} />
+    <BaseHead
+      title={`${SITE_TITLE} | À propos`}
+      description={SITE_DESCRIPTION}
+    />
   </head>
   <body class="overflow-x-hidden flex flex-col min-h-screen">
     <!-- Header -->
-	<div class="flex justify-center pt-12">
-        <Header />
-      </div>
+    <div class="flex justify-center pt-12">
+      <Header />
+    </div>
 
     <!-- Main Content -->
     <main class="flex-grow p-8">
       <div class="max-w-5xl mx-auto">
         <!-- Title Section -->
-        <h1 class="text-4xl font-bold text-gray-800 mb-6 text-center">À propos de moi</h1>
+        <h1 class="text-4xl font-bold text-gray-800 mb-6 text-center">
+          À propos de moi
+        </h1>
         <p class="text-lg text-gray-700 text-center mb-8">
-          Découvrez mon parcours, mes compétences et ce qui me motive en tant que créateur numérique.
+          Découvrez mon parcours, mes compétences et ce qui me motive en tant
+          que créateur numérique.
         </p>
 
         <!-- About Me Section -->
         <section class="mb-12">
-          <h2 class="text-2xl font-semibold text-gray-800 mb-4">Qui suis-je ?</h2>
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+            Qui suis-je ?
+          </h2>
           <p class="text-gray-700 leading-relaxed">
-            Je suis Franck Puybonnieux, étudiant en 3e année de BUT Métiers du Multimédia et de l'Internet 
-            à l'IUT du Limousin. Passionné par le design numérique et le multimédia, 
-            j'aime relever des défis créatifs, que ce soit dans le domaine du <span class="font-semibold">UI/UX design</span>, 
-            de la création graphique, ou encore du développement web.
+            Je suis Franck Puybonnieux, étudiant en 3e année de BUT Métiers du
+            Multimédia et de l'Internet à l'IUT du Limousin. Passionné par le
+            design numérique et le multimédia, j'aime relever des défis
+            créatifs, que ce soit dans le domaine du <span class="font-semibold"
+              >UI/UX design</span
+            >, de la création graphique, ou encore du développement web.
           </p>
         </section>
 
         <!-- My Skills Section -->
         <section class="mb-12">
-          <h2 class="text-2xl font-semibold text-gray-800 mb-4">Mes compétences</h2>
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+            Mes compétences
+          </h2>
           <ul class="list-disc list-inside text-gray-700 space-y-2">
-            <li>Design UI/UX : Création d'interfaces utilisateur intuitives et esthétiques.</li>
-            <li>Illustration : Conception d'illustrations originales et thématiques.</li>
-            <li>Développement web : Intégration de sites avec React, Tailwind CSS, et autres technologies.</li>
-            <li>Logiciels : Expertise sur Adobe Suite (Photoshop, Illustrator), Figma et plus encore.</li>
+            <li>
+              Design UI/UX : Création d'interfaces utilisateur intuitives et
+              esthétiques.
+            </li>
+            <li>
+              Illustration : Conception d'illustrations originales et
+              thématiques.
+            </li>
+            <li>
+              Développement web : Intégration de sites avec React, Tailwind CSS,
+              et autres technologies.
+            </li>
+            <li>
+              Logiciels : Expertise sur Adobe Suite (Photoshop, Illustrator),
+              Figma et plus encore.
+            </li>
           </ul>
         </section>
 
         <!-- What Drives Me Section -->
         <section class="mb-12">
-          <h2 class="text-2xl font-semibold text-gray-800 mb-4">Ce qui me motive</h2>
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">
+            Ce qui me motive
+          </h2>
           <p class="text-gray-700 leading-relaxed">
-            Curieux et créatif, je suis toujours à la recherche de nouvelles idées et d'opportunités 
-            pour innover. Mon objectif est de créer des expériences qui allient esthétique, 
-            simplicité et fonctionnalité, tout en collaborant avec des équipes dynamiques 
-            sur des projets qui ont du sens.
+            Curieux et créatif, je suis toujours à la recherche de nouvelles
+            idées et d'opportunités pour innover. Mon objectif est de créer des
+            expériences qui allient esthétique, simplicité et fonctionnalité,
+            tout en collaborant avec des équipes dynamiques sur des projets qui
+            ont du sens.
           </p>
         </section>
 
         <!-- Gallery Section -->
-      <section class="my-12">
-        <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">
-          Mes jeux-vidéo
-        </h2>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-          <!-- Image 1 avec Titre et Description -->
-          <div class="text-center">
-            <img
-              src="/réalisation2.png"
-              alt="Rendu 1"
-              class="rounded-lg shadow-lg hover-card mb-4"
-            />
-            <h3 class="text-xl font-semibold text-gray-800 mb-2">
-              Design de l'interface
-            </h3>
-            <p class="text-gray-600">
-              Voici une première vue de l'interface réalisée, mettant en valeur
-              la simplicité et l'accessibilité du design.
-            </p>
-          </div>
+        <section class="my-12">
+          <h2 class="text-3xl font-bold text-gray-800 mb-6 text-center">
+            Mes jeux-vidéo
+          </h2>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Image 1 avec Titre et Description -->
+            <div class="text-center">
+              <a href="/jeux1" target="_self">
+                <img
+                  src="/header.png"
+                  alt="Rendu 1"
+                  class="w-full h-48 object-cover rounded-lg shadow-lg hover:scale-105 hover:shadow-xl transition-transform duration-300 mb-4"
+                />
+              </a>
+              <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                Lethal Company
+              </h3>
+              <p class="text-gray-600">
+                Un jeu multijoueur de mini horreur combinant tactique et frayeur
+              </p>
+            </div>
 
-          <!-- Image 2 avec Titre et Description -->
-          <div class="text-center">
-            <img
-              src="/réalisation2.2.png"
-              alt="Rendu 2"
-              class="rounded-lg shadow-lg hover-card mb-4"
-            />
-            <h3 class="text-xl font-semibold text-gray-800 mb-2">
-              Prototype de la navigation
-            </h3>
-            <p class="text-gray-600">
-              Un prototype illustrant la navigation fluide et intuitive dans
-              l'application, visant à améliorer l'expérience utilisateur.
-            </p>
-          </div>
+            <!-- Image 2 avec Titre et Description -->
+            <div class="text-center">
+              <a
+                href="/prototype-navigation"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="/réalisation2.2.png"
+                  alt="Rendu 2"
+                  class="w-full h-48 object-cover rounded-lg shadow-lg hover:scale-105 hover:shadow-xl transition-transform duration-300 mb-4"
+                />
+              </a>
+              <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                Prototype de la navigation
+              </h3>
+              <p class="text-gray-600">
+                Un prototype illustrant la navigation fluide et intuitive dans
+                l'application, visant à améliorer l'expérience utilisateur.
+              </p>
+            </div>
 
-          <!-- Image 3 avec Titre et Description -->
-          <div class="text-center">
-            <img
-              src="/réalisation2.3.png"
-              alt="Rendu 3"
-              class="rounded-lg shadow-lg hover-card mb-4"
-            />
-            <h3 class="text-xl font-semibold text-gray-800 mb-2">
-              Écran d'accueil
-            </h3>
-            <p class="text-gray-600">
-              L'écran d'accueil montre une interface propre avec des éléments
-              interactifs faciles d'accès, dans une palette de couleurs
-              modernes.
-            </p>
-          </div>
+            <!-- Image 3 avec Titre et Description -->
+            <div class="text-center">
+              <a
+                href="/ecran-accueil"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="/réalisation2.3.png"
+                  alt="Rendu 3"
+                  class="w-full h-48 object-cover rounded-lg shadow-lg hover:scale-105 hover:shadow-xl transition-transform duration-300 mb-4"
+                />
+              </a>
+              <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                Écran d'accueil
+              </h3>
+              <p class="text-gray-600">
+                L'écran d'accueil montre une interface propre avec des éléments
+                interactifs faciles d'accès, dans une palette de couleurs
+                modernes.
+              </p>
+            </div>
 
-          <!-- Image 4 avec Titre et Description -->
-          <div class="text-center">
-            <img
-              src="/réalisation2.4.png"
-              alt="Rendu 4"
-              class="rounded-lg shadow-lg hover-card mb-4"
-            />
-            <h3 class="text-xl font-semibold text-gray-800 mb-2">
-              Conception du tableau de bord
-            </h3>
-            <p class="text-gray-600">
-              Le tableau de bord est conçu pour offrir une vue d'ensemble claire
-              des données et des options disponibles.
-            </p>
+            <!-- Image 4 avec Titre et Description -->
+            <div class="text-center">
+              <a
+                href="/tableau-de-bord"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="/réalisation2.4.png"
+                  alt="Rendu 4"
+                  class="w-full h-48 object-cover rounded-lg shadow-lg hover:scale-105 hover:shadow-xl transition-transform duration-300 mb-4"
+                />
+              </a>
+              <h3 class="text-xl font-semibold text-gray-800 mb-2">
+                Conception du tableau de bord
+              </h3>
+              <p class="text-gray-600">
+                Le tableau de bord est conçu pour offrir une vue d'ensemble
+                claire des données et des options disponibles.
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
       </div>
     </main>
 
     <!-- Footer -->
     <div class="w-full">
-		<Footer />
-	  </div>
+      <Footer />
+    </div>
   </body>
 </html>
